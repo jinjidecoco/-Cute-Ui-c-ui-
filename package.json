@@ -1,0 +1,19 @@
+{
+    "name": "cute-ui",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/jinjidecoco/Cute-Ui.git"
+    },
+    "author": "coco",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/jinjidecoco/Cute-Ui/issues"
+    },
+    "homepage": "https://github.com/jinjidecoco/Cute-Ui#readme"
+}
