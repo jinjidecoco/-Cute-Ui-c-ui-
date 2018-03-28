@@ -1,0 +1,18 @@
+@grid-gutter-width: 30px;
+.clearfix() {
+  &:before,
+  &:after {
+    content: " "; 
+    display: table; 
+  }
+  &:after {
+    clear: both;
+  }
+}
+.container{
+    margin-left: auto;
+    margin-left: auto;
+    padding-left:(@grid-gutter-width / 2);
+    padding-right:(@grid-gutter-width / 2);
+    .clearfix();
+}
