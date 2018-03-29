@@ -3,6 +3,5 @@ function sum(a, b) {
 }
 sum(1, 2);
 setTimeout(() => {
-    alert(1);
 
-}, timeout);
+}, 1000);
