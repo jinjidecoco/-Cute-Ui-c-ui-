@@ -1,7 +1,11 @@
-function sum(a, b) {
-    console.log(a + b)
-}
-sum(1, 2);
+function sum(a, b) {}
+sum(102, 2);
+
 setTimeout(() => {
 
-}, 1000);
+}, 2000);
+
+function reduce(a, b) {
+    console.log(a - b);
+}
+reduce(209, 0);

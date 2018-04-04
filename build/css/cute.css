@@ -1,3 +1,19 @@
+.demo {
+  width: 1400px;
+  height: 160px;
+  background: blue;
+  margin: 0 auto;
+}
+.demo .box {
+  width: 700px;
+  height: 200px;
+  background: red;
+}
+
+foot div {
+  height: 100px;
+}
+
 .container {
   margin-left: auto;
   margin-right: auto;
@@ -76,12 +92,14 @@
   .container {
     max-width: 750px;
   }
+  .col-sm- {
+    float: left;
+  }
   .col-sm-1 {
     width: 8.33333333%;
   }
   .col-sm-2 {
     width: 16.66666667%;
-    float: left;
   }
   .col-sm-3 {
     width: 25%;
@@ -91,7 +109,6 @@
   }
   .col-sm-5 {
     width: 41.66666667%;
-    float: left;
   }
   .col-sm-6 {
     width: 50%;
@@ -233,7 +250,7 @@
   .col-md-5,
   .col-md-2 {
     float: left;
-    background: green;
+    background: red;
   }
   .col-md-1 {
     width: 8.33333333%;
@@ -550,10 +567,6 @@
     margin-left: 100%;
   }
 }
-foot div {
-  height: 100px;
-}
-.demo {
-  width: 600px;
-  margin: 0 auto;
-}
+
+
+
