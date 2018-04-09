@@ -1,5 +1,7 @@
-function sum(a, b) {}
-sum(102, 2);
+function sum(a, b) {
+    // alert(a + b);
+}
+sum(102, 6);
 
 setTimeout(() => {
 

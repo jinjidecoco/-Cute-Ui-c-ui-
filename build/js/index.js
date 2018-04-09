@@ -1,1 +1,1 @@
-"use strict";function sum(e,u){}function reduce(e,u){console.log(e-u)}sum(102,2),setTimeout(function(){},2e3),reduce(209,0);
+"use strict";function sum(e,u){}function reduce(e,u){console.log(e-u)}sum(102,6),setTimeout(function(){},2e3),reduce(209,0);
