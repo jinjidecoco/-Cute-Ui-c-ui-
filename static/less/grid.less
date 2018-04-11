@@ -46,9 +46,6 @@
     margin-right: auto;
     padding-left:(@grid-gutter-width / 2);  //15px
     padding-right:(@grid-gutter-width / 2);  //15px
-    // .clearfix();
-    // -webkit-box-sizing:border-box;
-    // box-sizing:border-box;
 }
 .make-row(@gutter: @grid-gutter-width) {
   margin-left:  (@gutter / -2);
@@ -57,7 +54,6 @@
 }
 .row{
   .make-row();
-  background:#ccc;
 }
 
 [class*="col-xs-"],
@@ -70,7 +66,8 @@
   min-height: 1px;
   padding-left:@grid-gutter-width/2;
   padding-right:@grid-gutter-width/2;
-  background-color: #eee;
+  background-color: #29c2c1;
+  border:1px solid #eee;
 }
 [class*="col-xs-"]{
   float:left;
@@ -331,7 +328,7 @@
   }
   [class*="col-md-"]{
     float: left;
-    border:1px solid  yellowgreen;
+    // border:1px solid  yellowgreen;
     margin-top:5px;
   }
   .col-md-1 {

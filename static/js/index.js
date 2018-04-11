@@ -1,3 +1,5 @@
+ require('./home.js');
+
 function sum(a, b) {
     // alert(a + b);
 }
