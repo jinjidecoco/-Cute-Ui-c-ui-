@@ -14,7 +14,6 @@
 @global-danger:		    #dd514c; // #FC3159; //#da314b;
 @global-info:         @global-secondary;
 
-
 // Font  size
 // -----------------------------------------------------------------------------
 
@@ -67,7 +66,7 @@
 // -------------------------
 @linkColor:             #28a3ef;
 @linkHoverColor:        #4cb9fc;
-
+@link-hover-decoration: underline;
 @imgPath:              '../img/';
 
 
@@ -105,16 +104,17 @@
 @lineHeightLarge:       22px;
 @lineHeightXLarge:      27px;
 
-@baseBorderRadius:      4px;
-@borderRadiusLarge:     6px;
+@baseBorderRadius:      3px;
+@borderRadiusLarge:     4px;
 @borderRadiusSmall:     3px;
 @borderRadiusMini:      2px;
+@borderRadiusXLarge:    6px;
 
 // padding
 // used by btn and pagination
-@basePadding:           2px 14px;
+@basePadding:            3px 16px;
 @paddingXLarge:          4px 20px;
-@paddingLarge:          2px 14px;
+@paddingLarge:           2px 18px;
 @paddingSmall:           0px 6px;
 
 //块级组件margin规范,具体值可以再讨论
@@ -136,9 +136,9 @@
 @btn-primary-bg:                 @global-primary;
 @btn-primary-border:             @btn-primary-bg;
 
-@btn-secondary-color:            #fff;
-@btn-secondary-bg:               @global-secondary;
-@btn-secondary-border:           @global-secondary;
+@btn-info-color:            #fff;
+@btn-info-bg:               @global-secondary;
+@btn-info-border:           @global-secondary;
 
 @btn-success-color:              #fff;
 @btn-success-bg:                 @global-success;
@@ -151,3 +151,5 @@
 @btn-danger-color:               #fff;
 @btn-danger-bg:                  @global-danger;
 @btn-danger-border:              @btn-danger-bg;
+
+@btn-link-disabled-color:        @grayLight;
