@@ -8,12 +8,12 @@
   cursor: pointer;
   background-image: none;
   border: 1px solid transparent;
+  border-radius: @baseRadius;
   outline: none;
   -webkit-appearance: none;
   white-space: nowrap;
-
   transition: background-color 300ms ease-out, border-color 300ms ease-out;
-  .button-size(@basePadding,@baseFontSize,@baseLineHeight,@baseBorderRadius);
+  .button-size(@basePadding,@baseFontSize,@baseLineHeight,@baseRadius);
   &,
   &:active,
   &.active {
@@ -47,6 +47,13 @@
     fieldset[disabled] & {
       pointer-events: none; // Future-proof disabling of clicks on `<a>` elements
     }
+  }
+
+  &.radius {
+    border-radius: @baseRadiusNormal;
+  }
+  &.round {
+    border-radius: @globalRounded;
   }
 }
 
@@ -187,9 +194,16 @@
 }
 
 //按钮基本设置（内边距、字体大小、行高、边框）
-.button-size(@basePadding,@baseFontSize,@baseLineHeight,@baseBorderRadius) {
+.button-size(@basePadding,@baseFontSize,@baseLineHeight,@baseRadius) {
   padding: @basePadding;
   font-size: @baseFontSize;
   line-height: @baseLineHeight;
-  border-radius: @baseBorderRadius;
+  border-radius: @baseRadius;
+}
+
+//不固定
+.btn-block {
+  display: block;
+  width: 50%;
+  margin:10px auto;
 }

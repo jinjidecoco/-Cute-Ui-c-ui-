@@ -1,3 +1,4 @@
+/*****************/
 .cu-container {
   margin-left: auto;
   margin-right: auto;
@@ -25,8 +26,6 @@
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
-  background-color: #29c2c1;
-  border: 1px solid #eee;
 }
 [class*="col-xs-"] {
   float: left;
@@ -75,7 +74,6 @@
   }
   [class*="col-sm-"] {
     float: left;
-    border: 1px solid yellow;
     margin-top: 5px;
   }
   .col-sm-1 {
@@ -391,7 +389,6 @@
   }
   [class*="col-lg-"] {
     float: left;
-    border: 1px solid  yellowgreen;
     margin-top: 5px;
   }
   .col-lg-1 {
@@ -554,7 +551,6 @@
   }
   [class*="col-vg-"] {
     float: left;
-    border: 1px solid  yellowgreen;
     margin-top: 5px;
   }
   .col-vg-1 {

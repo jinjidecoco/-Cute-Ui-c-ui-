@@ -60,7 +60,7 @@ gulp.task("servers", function() {
         }
     });
     connect.server({
-        host: '172.16.0.10',
+        host: '192.168.0.113',
         port: 8081,
         root: "./",
         livereload: true,

@@ -1,0 +1,292 @@
+@import "variable.less";
+@import "mixins.less";
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+legend {
+  display: block;
+  width: 100%;
+  padding: 0;
+  font-size: (@form-font-size * 1.25);
+  margin-bottom: @line-height-computed;
+  line-height: inherit;
+  color: @legend-color;
+  border-bottom: 1px solid #e5e5e5;
+  padding-bottom: 5px;
+}
+label {
+  display: inline-block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+input[type="search"] {
+  box-sizing: border-box;
+}
+input[type="radio"],
+input[type="checkbox"] {
+  margin: 4px 0 0;
+  margin-top: 1px \9; /* IE8-9 */
+  line-height: normal;
+}
+input[type="file"] {
+  display: block;
+}
+
+select[multiple],
+select[size] {
+  height: auto;
+}
+
+// Fix optgroup Firefox bug per https://github.com/twbs/bootstrap/issues/7611
+select optgroup {
+  font-size: inherit;
+  font-style: inherit;
+  font-family: inherit;
+}
+
+input[type="file"]:focus,
+input[type="radio"]:focus,
+input[type="checkbox"]:focus {
+  .tab-focus();
+}
+
+input[type="number"] {
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    height: auto;
+  }
+}
+output {
+  display: block;
+  padding-top: 16px;
+  font-size: @font-size-base;
+  line-height: @line-height-base;
+  color: @input-color;
+  // vertical-align: middle;
+}
+
+//common  form
+form select,
+form textarea,
+form input[type="text"],
+form input[type="password"],
+form input[type="datetime"],
+form input[type="datetime-local"],
+form input[type="date"],
+form input[type="month"],
+form input[type="time"],
+form input[type="week"],
+form input[type="number"],
+form input[type="email"],
+form input[type="url"],
+form input[type="search"],
+form input[type="tel"],
+form input[type="color"],
+.form-field {
+  display: block;
+  width: 100%;
+  padding: @input-padding;
+  font-size: @form-font-size;
+  line-height: @form-line-height;
+  color: @input-color;
+  // vertical-align: middle;
+  background-color: @input-bg;
+  background-image: none;
+  border: 1px solid @input-border;
+  border-radius: @input-border-radius;
+  -webkit-appearance: none;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  &:focus {
+    outline: 0;
+  }
+  .form-field-focus(@input-border-focus);
+
+  &::placeholder {
+    color: @input-color-placeholder;
+  }
+
+  &::-moz-placeholder {
+    opacity: 1;
+  }
+
+  // Disabled and read-only inputs
+  &[disabled],
+  &[readonly],
+  fiseldset[disabled] & {
+    cursor: not-allowed;
+    background-color: @input-bg-disabled;
+  }
+
+  &.radius {
+    border-radius: @baseRadiusNormal;
+  }
+
+  &.round {
+    border-radius: @globalRounded;
+  }
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form {
+  textarea,
+  select[multiple],
+  select[size] {
+    height: auto;
+  }
+  select {
+    // via Foundation
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important; // since Firefox 31 ?
+    -webkit-border-radius: @baseRadiusNormal;
+    background: #fff
+      url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeD0iMTJweCIgeT0iMHB4IiB3aWR0aD0iMjRweCIgaGVpZ2h0PSIzcHgiIHZpZXdCb3g9IjAgMCA2IDMiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDYgMyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PHBvbHlnb24gcG9pbnRzPSI1Ljk5MiwwIDIuOTkyLDMgLTAuMDA4LDAgIi8+PC9zdmc+")
+      no-repeat 100% center;
+
+    &[multiple="multiple"] {
+      background-image: none;
+    }
+  }
+}
+
+.form-help {
+  display: block;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  color: @grayLight;
+  font-size: 13px;
+}
+
+//文件上传按钮
+.form-file {
+  position: relative;
+  overflow: hidden;
+  input[type="file"] {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    opacity: 0;
+    cursor: pointer;
+    font-size: 50px;
+  }
+}
+
+.form-label {
+  margin-bottom: 0;
+  vertical-align: middle;
+}
+
+/* Checkboxes and radios 块级显示时 */
+.radio,
+.checkbox {
+  position: relative;
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding-left: 20px;
+  // vertical-align: middle;
+  label {
+    min-height: auto;
+    padding-left: 20px;
+    margin-bottom: 0;
+    font-weight: normal;
+    cursor: pointer;
+  }
+}
+.radio input[type="radio"],
+.radio-inline input[type="radio"],
+.checkbox input[type="checkbox"],
+.checkbox-inline input[type="checkbox"] {
+  float: left;
+  margin-left: -20px;
+  outline: none;
+}
+
+.radio + .radio,
+.checkbox + .checkbox {
+  margin-top: -5px; // Move up sibling radios or checkboxes for tighter spacing
+}
+
+/* Radios and checkboxes inline  行内显示时*/
+.radio-inline,
+.checkbox-inline {
+  display: inline-block;
+  padding-left: 20px;
+  margin-bottom: 0;
+  vertical-align: middle;
+  font-weight: normal;
+  cursor: pointer;
+}
+.radio-inline + .radio-inline,
+.checkbox-inline + .checkbox-inline {
+  margin-top: 0;
+  margin-left: 10px; // space out consecutive inline controls
+}
+
+// Note: Neither radios nor checkboxes can be readonly (单选框和多选框只读).
+input[type="radio"],
+input[type="checkbox"],
+.radio,
+.radio-inline,
+.checkbox,
+.checkbox-inline {
+  &[disabled],
+  fieldset[disabled] & {
+    cursor: not-allowed;
+  }
+}
+
+//水平排列
+.form-horizontal {
+  .form-label,
+  .radio,
+  .checkbox,
+  .radio-inline,
+  .checkbox-inline {
+    // margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 7px;
+  }
+  .form-group {
+    .clearfix();
+  }
+  @media (min-width: @screen-sm-min) {
+    .form-label {
+      text-align: right;
+    }
+  }
+}
+
+//行内排列
+.form-inline {
+  @media (min-width: @screen-sm-min) {
+    .form-group {
+      display: inline-block;
+      margin-bottom: 0;
+      vertical-align: middle;
+    }
+    .form-control {
+      display: inline-block;
+      width: auto;
+      vertical-align: middle;
+    }
+  }
+}
+
+//form filed size
+
+.input-sm {
+  font-size: @form-font-size-sm !important;
+}
+
+.input-lg {
+  font-size: @form-font-size-lg !important;
+}

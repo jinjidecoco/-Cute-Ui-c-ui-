@@ -1,3 +1,4 @@
+/*****************/
 .btn {
   display: inline-block;
   margin-bottom: 0;
@@ -13,7 +14,7 @@
   padding: 3px 16px;
   font-size: 12px;
   line-height: 18px;
-  border-radius: 3px;
+  border-radius: 0px;
 }
 .btn:focus,
 .btn:active:focus,
@@ -47,6 +48,12 @@ fieldset[disabled] .btn {
 a.btn.disabled,
 fieldset[disabled] a.btn {
   pointer-events: none;
+}
+.btn.radius {
+  border-radius: 2px;
+}
+.btn.round {
+  border-radius: 500px;
 }
 .btn-default {
   color: #444;
@@ -478,7 +485,7 @@ fieldset[disabled] .btn-danger.active {
   padding: 0px 6px;
   font-size: 12px;
   line-height: 18px;
-  border-radius: 2px;
+  border-radius: 1px;
 }
 .btn-xg {
   padding: 4px 20px;
@@ -516,4 +523,9 @@ fieldset[disabled] .btn-link:hover,
 fieldset[disabled] .btn-link:focus {
   color: #999;
   text-decoration: none;
+}
+.btn-block {
+  display: block;
+  width: 50%;
+  margin: 10px auto;
 }
