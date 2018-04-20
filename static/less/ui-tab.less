@@ -1,0 +1,33 @@
+/***********  tab *****/
+// @import "reset.less";
+
+.clearfix() {
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+.tab-container {
+  .tab-nav {
+    .clearfix();
+    li {
+      float: left;
+      padding: 4px 8px;
+      margin-left:2px;
+      cursor: pointer;
+      &.active {
+        background: red;
+      }
+    }
+  }
+  .tab-panel {
+    //   display: none;
+    &.active {
+      display: block;
+    }
+  }
+}

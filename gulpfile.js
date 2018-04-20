@@ -30,11 +30,14 @@ gulp.task("style", function() {
 });
 
 gulp.task("default", function() {
-    return gulp
+    return (
+      gulp
         .src("static/js/*.js")
+        // .pipe(uglify())
+        .pipe(concat("cute.js"))
         .pipe(babel())
-        .pipe(uglify())
-        .pipe(gulp.dest("build/js"));
+        .pipe(gulp.dest("build/js"))
+    );
 });
 
 gulp.task("watch", function() {

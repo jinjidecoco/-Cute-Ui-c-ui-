@@ -4592,6 +4592,9 @@ h1 {
   font-size: 2em;
   margin: 0.67em 0;
 }
+li {
+  list-style: none;
+}
 mark {
   background: #ff0;
   color: #000;
@@ -4781,6 +4784,28 @@ hr {
   margin-bottom: 20px;
   border: 0;
   border-top: 1px solid #eeeeee;
+}
+
+/***********  tab *****/
+.tab-container .tab-nav:before,
+.tab-container .tab-nav:after {
+  content: " ";
+  display: table;
+}
+.tab-container .tab-nav:after {
+  clear: both;
+}
+.tab-container .tab-nav li {
+  float: left;
+  padding: 4px 8px;
+  margin-left: 2px;
+  cursor: pointer;
+}
+.tab-container .tab-nav li.active {
+  background: red;
+}
+.tab-container .tab-panel.active {
+  display: block;
 }
 
 /*****************/
