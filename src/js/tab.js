@@ -1,5 +1,5 @@
 var $ = require("jquery");
-//  import $ from "jquery";
+
 (function($, window, document, undefined) {
   function Tab(element, options) {
     var defaults = {
