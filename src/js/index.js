@@ -1,3 +1,5 @@
+ 
+ var $ =require('jquery');
  require('../css/lib/reset.less');
  require('../css/variable.less');
  require("../css/mixins.less");
@@ -6,7 +8,9 @@
  require("../css/icon.less");
  require("../css/form.less");
  require("../css/ui-tab.less");
+ require("../css/ui-dropdown.less");
  require('./tab.js');
+ require('./dropdown.js');
 
 
  $(function(){
@@ -14,6 +18,8 @@
       index: 1,
       className: "cur"
     });
+
+    $(".dropdown").dropdown();
 
  });
 

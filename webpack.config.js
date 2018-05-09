@@ -67,7 +67,8 @@ var config = {
     new webpack.ProvidePlugin({
       //加载jq
       $: "jquery",
-      jQuery: "jquery"
+      jQuery: "jquery",
+      "window.jQuery": "jquery"
     }),
     new webpack.optimize.CommonsChunkPlugin({
       name: "vendor",

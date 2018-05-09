@@ -5,7 +5,7 @@
   "main": "webpack.config.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "webpack-dev-server --open --inline --progress  --profile ",
+    "dev": "webpack-dev-server --open --inline --progress  --d",
     "build": "rm -rf build/* view/* && NODE_ENV=production webpack --progress --hide-modules",
     "clean": "rm -rf build/"
   },
@@ -38,6 +38,7 @@
     "webpack-dev-server": "^2.9.1"
   },
   "dependencies": {
+    "art-template": "^4.12.2",
     "jquery": "^3.2.1"
   }
 }

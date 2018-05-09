@@ -962,3 +962,27 @@
     margin-left: percentage(( 12 / @grid-columns));
   }
 }
+
+
+
+/***********等分多栏布局***********/
+
+.columns(@width,@column,@gap,@h){
+  width: @width + @gap;
+  margin-right:-@gap;
+  overflow: hidden;
+  .clearfix;
+  li{
+    // width:((@width - (@column - 1)*@gap )/@column)/@width *100%;
+    width:(@width - (@column - 1)*@gap )/@column;
+    float:left;
+    margin-right:@gap;
+    border:1px solid red;
+    margin-bottom:@gap;
+    height:@h
+  }
+}
+.content-lists{
+  .columns(1130px,3,10px,300px)
+    
+}

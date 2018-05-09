@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<style>
+    .banner-ad {
+        height: 540px;
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+        z-index: 1000
+    }
+
+    .banner-container {
+        width: 1920px;
+        position: absolute;
+        left: 50%;
+        margin-left: -960px;
+        overflow: hidden;
+        z-index: 1;
+    }
+
+    .banner .swiper-pagination {
+        bottom: 40px;
+    }
+
+    .swiper-container {
+        width: 100%;
+        height: 540px;
+    }
+
+    .swiper-button-prev {
+        position: absolute;
+        left: 20%;
+        background-image: url('../src/image/btnNext.png');
+        background-size: 88px 86px;
+        background-position: 0 0;
+        width: 44px;
+        height: 86px;
+        overflow: hidden;
+        margin-top: -43px;
+        opacity: 0;
+        transition: opacity .6s;
+    }
+
+    .swiper-button-next {
+        position: absolute;
+        right: 20%;
+        background-image: url('../src/image/btnNext.png');
+        background-size: 88px 86px;
+        background-position: -44px 0;
+        width: 44px;
+        height: 86px;
+        margin-top: -43px;
+        overflow: hidden;
+        opacity: 0;
+        transition: opacity .6s;
+    }
+
+    .banner-ad:hover .swiper-button-prev,
+    .banner-ad:hover .swiper-button-next {
+        opacity: .9;
+    }
+
+    .swiper-pagination-bullet {
+        width: 78px;
+        height: 2px;
+        display: inline-block;
+        border-radius: 0;
+        background-color: rgba(255, 255, 255, .5);
+        opacity: 1;
+    }
+
+    .swiper-pagination-bullets {
+        margin-bottom: 30px;
+    }
+
+    .swiper-pagination-bullet.swiper-pagination-bullet-active {
+        background-color: #fff;
+    }
+</style>
+
+<body>
+    <div class='cu-header-fixed'>
+        <div class="cu-container clearfix">
+            <a href="" style=''>
+                <img src="../image/logo.jpg" alt="" style='width:50px;height:50px'>
+            </a>
+            <ul class='nav-list clearfix'>
+                <li><a href="">首页</a></li>
+                <li><a href="">关于我们</a></li>
+                <li><a href="">产品中心</a></li>
+                <li><a href="">加入我们</a></li>
+                <li><a href="">联系我们</a></li>
+            </ul>
+        </div>
+    </div>    	
+    <div class='banner-ad'>
+        <div class="banner-container">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a href="">
+                            <img src="../image/23.png" alt="">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="">
+                            <img src="../image/34.png" alt="">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="">
+                            <img src="../image/45.jpg" alt="">
+                        </a>
+                    </div>
+                </div>
+                <!-- 如果需要分页器 -->
+                <div class="swiper-pagination"></div>
+
+                <!-- 如果需要导航按钮 -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+
+                <!-- 如果需要滚动条 -->
+                <!-- <div class="swiper-scrollbar"></div> -->
+            </div>
+        </div>
+    </div>
+
+<script id="test" type="text/html">
+
+    <h1>{{title}}</h1>
+
+    <ul>
+
+        {{each list as value i}}
+
+        <li>索引 {{i + 1}} ：{{value}}</li>
+
+        {{/each}}
+
+    </ul>
+
+</script>
+</body>
+
+</html>

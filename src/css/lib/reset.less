@@ -6,6 +6,16 @@ html {
 body {
   margin: 0;
 }
+//设置margin
+h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, address, cit, code,
+del, dfn, em, ins, q, samp, small, strong, sub, sup, b, i, hr, dl, dt, dd,
+ol, ul, li, fieldset, legend, label {
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  margin: 0;
+  padding: 0;
+}
 article,
 aside,
 details,
@@ -52,10 +62,7 @@ strong {
 dfn {
   font-style: italic;
 }
-h1 {
-  font-size: 2em;
-  margin: 0.67em 0;
-}
+
 li{
   list-style:none;
 }
@@ -217,7 +224,7 @@ a {
 a:hover,
 a:focus {
   color: #2a6496;
-  text-decoration: underline;
+  text-decoration: none;
 }
 a:focus {
   outline: thin dotted;
@@ -228,7 +235,7 @@ figure {
   margin: 0;
 }
 img {
-  vertical-align: middle;
+  vertical-align: top;
 }
 .img-responsive {
   display: block;

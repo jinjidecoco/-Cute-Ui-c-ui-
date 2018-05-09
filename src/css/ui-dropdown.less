@@ -1,0 +1,105 @@
+//variables
+
+@import "variable.less";
+
+@dropdown-bg: #fff;
+@dropdown-border-color: #ddd;
+@dropdown-divider-bg: #e5e5e5;
+
+@dropdown-link-color: @grayDark;
+@dropdown-link-hover-color: darken(@grayDark, 5%);
+@dropdown-link-hover-bg: #f5f5f5;
+@dropdown-link-active-color: @component-active-color;
+@dropdown-link-active-bg: @component-active-bg;
+@dropdown-link-disabled-color: @grayLight;
+
+@dropdown-header-color: @grayLight;
+@dropdown-caret-color: darken(@dropdown-border-color, 5%);
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+// .dropdown-toggle:focus {
+//   outline: none;
+// }
+.dropdown-content {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  display: none;
+  float: left;
+  min-width: 160px;
+  padding: 15px;
+  margin: 9px 0 0;
+  text-align: left;
+  line-height: @baseLineHeight;
+  background-color: @dropdown-bg;
+  border: 1px solid @dropdown-border-color;
+  border-radius: 2px;
+  animation-duration: 0.15s;
+
+  &:before,&:after{
+      position:absolute;
+      content:'';
+      display:block;
+      width:0;
+      height:0;
+      border-right:8px dashed transparent;
+      border-left:8px dashed transparent;
+      border-bottom:8px dashed #ddd;
+      border-width: 0 8px 8px;
+  }
+  &:after {
+    top: -7px;
+    left: 10px;
+    border-width:8px;
+    border-bottom-color:#fff;
+  }
+  &:before, {
+    left: 10px;
+    top: -8px;
+    border-top-color:#ddd;
+  }
+
+}
+
+ul.dropdown-content {
+  list-style: none;
+  padding: 5px 0;
+  > li > a {
+    display: block;
+    padding: 6px 20px;
+    clear: both;
+    font-weight: normal;
+    color: @dropdown-link-color;
+    white-space: nowrap;
+    &:hover {
+      color: @dropdown-link-active-color;
+      text-decoration: none;
+      outline: none;
+      background-color: @dropdown-link-active-bg;
+    }
+  }
+  &,
+  &:hover,
+  &:focus {
+    color: @dropdown-link-active-color;
+    text-decoration: none;
+    outline: none;
+  }
+}
+.dropdown-animation{
+  animation: dropdown-animation .02s ease-out
+}
+
+@keyframes dropdown-animation{
+  0%{
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform:translateY(-10px);
+  }
+}
